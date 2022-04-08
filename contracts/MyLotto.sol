@@ -1,6 +1,20 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.4;
+/*
 
+ /$$      /$$           /$$                   /$$     /$$              
+| $$$    /$$$          | $$                  | $$    | $$              
+| $$$$  /$$$$ /$$   /$$| $$        /$$$$$$  /$$$$$$ /$$$$$$    /$$$$$$ 
+| $$ $$/$$ $$| $$  | $$| $$       /$$__  $$|_  $$_/|_  $$_/   /$$__  $$
+| $$  $$$| $$| $$  | $$| $$      | $$  \ $$  | $$    | $$    | $$  \ $$
+| $$\  $ | $$| $$  | $$| $$      | $$  | $$  | $$ /$$| $$ /$$| $$  | $$
+| $$ \/  | $$|  $$$$$$$| $$$$$$$$|  $$$$$$/  |  $$$$/|  $$$$/|  $$$$$$/
+|__/     |__/ \____  $$|________/ \______/    \___/   \___/   \______/ 
+              /$$  | $$                                                
+             |  $$$$$$/                                                
+              \______/                                                 
+
+*/
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/security/Pausable.sol";
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
@@ -28,7 +42,6 @@ interface MyLottoNFT {
  * -60% of all ticket proceeds go directly to the Grand Prize, the rest can be withdrawn by the contract owner to pay for ongoing expenses
  * -Contract is Pausable, making it so we can pause new entries, prevent starting new drawings, but not prevent a winner's ability to withdraw
  */
-
 contract MyLotto is Pausable, Ownable {
     using Counters for Counters.Counter;
 
